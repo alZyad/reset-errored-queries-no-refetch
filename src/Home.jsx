@@ -83,11 +83,11 @@ function Home() {
 
       <section>
         <h2>Actions</h2>
-        <button onClick={resetAll}>Reset all queries</button>
-        <button onClick={resetSuccessful}>Reset all successful queries</button>
-        <button onClick={resetErrored}>Reset all errored queries</button>
-        <button onClick={resetSuccess}>Reset query 1 (success)</button>
-        <button onClick={resetError}>Reset query 2 (error)</button>
+        <button onClick={resetAll}>Reset all queries (does refetch)</button>
+        <button onClick={resetSuccessful}>Reset all successful queries (does not refetch)</button>
+        <button onClick={resetErrored}>Reset all errored queries (does not refetch)</button>
+        <button onClick={resetSuccess}>Reset query 1 (success) (does refetch)</button>
+        <button onClick={resetError}>Reset query 2 (error) (does refetch)</button>
       </section>
 
       <section>
