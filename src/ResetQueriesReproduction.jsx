@@ -54,31 +54,22 @@ function ResetQueriesReproduction() {
   return (
     <div>
       <section>
-        <h2>Actions</h2>
         <button onClick={resetAll}>Reset all queries (does refetch ✅)</button>
-        <br />
         <pre>{`queryClient.resetQueries();`}</pre>
-        <br />
         <button onClick={resetSuccessByStatus}>Reset all successful queries (does not refetch ❌)</button>
-        <br />
         <pre>
           {`queryClient.resetQueries({
   predicate: (q) => q.state.status === "success",
 });`}
         </pre>
-        <br />
         <button onClick={resetErrorByStatus}>Reset all errored queries (does not refetch ❌)</button>
-        <br />
         <pre>
           {`queryClient.resetQueries({
   predicate: (q) => q.state.status === "error",
 });`}
         </pre>
-        <br />
         <button onClick={resetSuccessByQueryKey}>Reset query 1 (success) (does refetch ✅)</button>
-        <br />
         <pre>{`queryClient.resetQueries({ queryKey: ["success"] });`}</pre>
-        <br />
         <button onClick={resetErrorByQueryKey}>Reset query 2 (error) (does refetch ✅)</button>
         <pre>{`queryClient.resetQueries({ queryKey: ["error"] });`}</pre>
       </section>

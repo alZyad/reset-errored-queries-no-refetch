@@ -11,9 +11,7 @@ function InvalidateQueriesReproduction() {
     queryFn: fetchHelloWorld,
   });
 
-  const validityQueryState = queryClient
-    .getQueryCache()
-    .find({ queryKey: ["validity"] })?.state;
+  const validityQueryState = queryClient.getQueryCache().find({ queryKey: ["validity"] })?.state;
   const isInvalidated = validityQueryState?.isInvalidated;
 
   const [validityResetKey, setValidityResetKey] = useState(0);
@@ -46,14 +44,11 @@ function InvalidateQueriesReproduction() {
   return (
     <div>
       <section>
-        <h2>Actions</h2>
         <button onClick={invalidateAll}>Invalidate all queries</button>
         <br />
         <pre>{`queryClient.invalidateQueries();`}</pre>
         <br />
-        <button onClick={invalidateByIsInvalidatedTrueField}>
-          Invalidate queries where isInvalidated === true
-        </button>
+        <button onClick={invalidateByIsInvalidatedTrueField}>Invalidate queries where isInvalidated === true</button>
         <br />
         <pre>
           {`queryClient.invalidateQueries({
@@ -61,9 +56,7 @@ function InvalidateQueriesReproduction() {
 });`}
         </pre>
         <br />
-        <button onClick={invalidateByIsInvalidatedFalseField}>
-          Invalidate queries where isInvalidated === false
-        </button>
+        <button onClick={invalidateByIsInvalidatedFalseField}>Invalidate queries where isInvalidated === false</button>
         <br />
         <pre>
           {`queryClient.invalidateQueries({

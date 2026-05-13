@@ -1,3 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+pre,
+code {
+  font-family: system-ui;
+}
+
+button {
+  padding: 0.5em 1em;
+  border: 1px solid #c0c0c0;
+  border-radius: 6px;
+  background: #f6f6f6;
+  cursor: pointer;
+  font-size: 0.95em;
+  margin: 0;
+}
+button:hover {
+  background: #ececec;
+}
+button:active {
+  background: #e0e0e0;
+}
+
+pre,
+code {
+  background: #f2f2ff;
+  border: 1px solid #c0c0ff;
+  border-radius: 6px;
+  padding: 0.5em 0.75em;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  margin: 0.3em 0 1.5em 0;
+}
+
 .home-columns {
   display: flex;
   gap: 1rem;
